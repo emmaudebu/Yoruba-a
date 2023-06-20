@@ -181,11 +181,13 @@ body{
 
 .user{
   position: relative;
-  width: 40px;
+  width: 300px;
   height: 40px;
-  border-radius:50%;
   overflow: hidden;
   cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 .user ion-icon{
   position: absolute ;
@@ -199,6 +201,45 @@ body{
 }
 .navigation.active{
   width: 80px;
+}
+
+.board-cards{
+  width:100% ;
+  padding: 20px;
+  display: grid;
+  grid-gap:30px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.board-cards section{
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  
+}
+
+.board-cards section p ion-icon{
+  color: #4594e1;
+  font-size: 30px;
+}
+.board-cards section p{
+ font-weight: bolder;
+
+}
+
+.board-cards section button{
+  cursor: pointer;
+  width: 200px;
+  margin: auto;
+  border: none;
+  height: 50px;
+  border-radius: 20px;
+  color: white;
+  background: #4594e1;
 }
 
 

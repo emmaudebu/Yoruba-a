@@ -68,8 +68,11 @@
 <section class="main">
   <div class="topbar">
     <div class="toggle">
+     
       <ion-icon name="menu-outline"></ion-icon>
     </div>
+      
+      
     <div class="search">
       <label >
         <input type="text" placeholder="Search here">
@@ -78,9 +81,41 @@
     </div>
     <div class="user">
       <ion-icon name="person-circle-outline"></ion-icon>
+      <p id="adminUsername"></p>
     </div>
   </div>
-<section id="pageModal"></section>
+<div class="board-cards">
+  <section>
+    <p><ion-icon name="albums-outline"></ion-icon></p>
+    <p>Total Categories</p>
+    <p id="category">0</p>
+  </section>
+  <section>
+    <p><ion-icon name="book-outline"></ion-icon></p>
+    <p>Learning Materials</p>
+    <p id="learningMaterials">0</p>
+  </section>
+  <section>
+    <p><ion-icon name="albums-outline"></ion-icon></p>
+    <p>Total Sub-Categories</p>
+    <p id="subCategories">0</p>
+  </section>
+  <section>
+    <p><ion-icon name="cog-outline"></ion-icon></p>
+    <p>Total Quiz</p>
+    <p id="totalQuiz">0</p>
+  </section>
+  <section>
+    <p><ion-icon name="school-outline"></ion-icon></p>
+    <p>Total Students</p>
+    <p id="totalStudents">0</p>
+  </section>
+  <section>
+   
+    <button id="topThreeStudentButton">Top 3 Students</button>
+  </section>
+ 
+</div>
 </section>
 
 

@@ -258,22 +258,24 @@ body {
 }
 #getBestStudents-box {
   width: 400px;
-  height: 400px;
+  height: 500px;
   background-color: #fff;
   border-radius: 20px;
   border: 0.5px solid rgba(128, 128, 128, 0.514);
   padding: 20px;
+  padding-bottom: 10px;
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
 }
 #getBestStudents-box h3 {
   text-align: center;
-  margin-block: 10px;
+  padding-bottom: 5px;
+  font-size: 16px;
 }
 .search-card {
-  padding: 20px;
-  font-size: 20px;
+  padding: 10px;
+  font-size: 15px;
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   width: 100%;
 }
 
@@ -286,4 +288,9 @@ body {
   border-radius: 20px;
   color: white;
   background: #4594e1;
+}
+.card {
+  color: var(--blue);
+  display: flex;
+  width: 50%;
 }

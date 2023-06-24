@@ -143,8 +143,24 @@ topThreeStudentButton.addEventListener("click", function (event) {
             <div class="search-card">
            
               <div class="card">
-                <pclass="name">Name:</pclass=>
+                <p>Name: </p>
                 <p>${item.name}</p>
+              </div>
+              <div class="card">
+                <p>Email: </p>
+                <p>${item.email}</p>
+              </div>
+              <div class="card">
+                <p>Phone: </p>
+                <p>${item.phone_number}</p>
+              </div>
+              <div class="card">
+                <p>Position: </p>
+                <p>${item.position}</p>
+              </div>
+              <div class="card">
+                <p>Score: </p>
+                <p>${item.total_score}</p>
               </div>
             </div>
           `

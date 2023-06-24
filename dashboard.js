@@ -129,6 +129,9 @@ topThreeStudentButton.addEventListener("click", function (event) {
       btn3.addEventListener("click", () => {
         studentModal.style.display = "none";
       });
+      studentModal.addEventListener("click", () => {
+        studentModal.style.display = "none";
+      });
 
       // STEP 15 - Write an if statement that checks if the length of the result is equal to zero. Write a notification to the users if (result.length === 0){ getBestStudents.innerHTML = "No Information Found";}
       if (result.length === 0) {

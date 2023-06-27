@@ -294,3 +294,40 @@ body {
   display: flex;
   width: 50%;
 }
+@media only screen and (max-width: 600px) {
+  .navigation {
+    width: 80px;
+  }
+  .board-cards {
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .main {
+    position: relative;
+    width: calc(100% - 300px);
+    left: 80px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
+  }
+  .toggle {
+    display: none;
+  }
+  .board-cards section {
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    width: 70%;
+  }
+  body {
+    background-color: #4594e1;
+  }
+}

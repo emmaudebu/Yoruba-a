@@ -313,6 +313,12 @@ body {
     object-fit: contain;
     color: #4594e1;
   }
+  .search label ion-icon {
+    position: relative;
+    /* top: 0;
+    left: 10px; */
+    font-size: 1.2rem;
+  }
   .user {
     position: relative;
     width: 50px;

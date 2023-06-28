@@ -401,3 +401,122 @@ body {
     width: 150px;
   }
 }
+
+/* /////////////////////////////////////////////Tablet-view//////////////////////////////////////// */
+
+@media (max-width: 991px) {
+  .topbar {
+    width: 75vw;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10 10px;
+    margin-top: 0px;
+    gap: 5px;
+    /* background-color: rebeccapurple; */
+  }
+  .user ion-icon {
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    /* width: 50px;
+    height: 50px; */
+    object-fit: contain;
+    color: #4594e1;
+  }
+  .search label ion-icon {
+    position: relative;
+    /* top: 0;
+    left: 10px; */
+    font-size: 1.2rem;
+  }
+  .user {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .search label input {
+    width: 300px;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    margin-top: 10px;
+    padding-left: 35px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid black;
+  }
+  .search label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .search label ion-icon {
+    font-size: 30px;
+  }
+
+  .navigation {
+    width: 80px;
+  }
+  .board-cards {
+    width: 100%;
+    padding: 10px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .main {
+    position: relative;
+    width: calc(100% - 300px);
+    left: 80px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
+  }
+  .toggle {
+    display: none;
+  }
+  .board-cards section {
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    width: 70vw;
+  }
+  #adminUsername {
+    display: none;
+  }
+  #getBestStudents-box {
+    width: 80%;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 0.5px solid rgba(128, 128, 128, 0.514);
+    padding: 10px;
+    /* padding-right: 0px; */
+    padding-bottom: 10px;
+
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  }
+  .search-card {
+    padding: 5px;
+    font-size: 15px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .search-card .card {
+    width: 150px;
+  }
+}

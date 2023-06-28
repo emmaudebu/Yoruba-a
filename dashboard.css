@@ -368,11 +368,11 @@ body {
     flex-direction: column;
     gap: 10px;
     padding: 30px;
-    margin-right: 10px;
+
     border-radius: 20px;
     cursor: pointer;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
-    width: 100%;
+    width: 70vw;
   }
   #adminUsername {
     display: none;

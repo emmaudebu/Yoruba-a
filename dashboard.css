@@ -313,7 +313,7 @@ body {
     background: var(--white);
     transition: 0.5s;
   }
-  .toggle {
+  z .toggle {
     display: none;
   }
   .board-cards section {
@@ -325,9 +325,6 @@ body {
     border-radius: 20px;
     cursor: pointer;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
-    width: 70%;
-  }
-  body {
-    background-color: #4594e1;
-  }
+    width: 100 gam   idi bab
+      house
 }

@@ -294,7 +294,9 @@ body {
   display: flex;
   width: 50%;
 }
-@media only screen and (max-width: 600px) {
+/* //////////////////////////////////////////Mobile-view//////////////////////////////////////////////// */
+
+@media only screen and (max-width: 768px) {
   .topbar {
     width: 75vw;
     height: 60px;
@@ -330,7 +332,7 @@ body {
     align-items: center;
   }
   .search label input {
-    width: 180px;
+    width: 200px;
     height: 40px;
     border-radius: 40px;
     padding: 5px 20px;
@@ -404,7 +406,7 @@ body {
 
 /* /////////////////////////////////////////////Tablet-view//////////////////////////////////////// */
 
-@media (max-width: 991px) {
+@media (max-width: 820px) {
   .topbar {
     width: 75vw;
     height: 60px;
@@ -413,21 +415,14 @@ body {
     padding: 10 10px;
     margin-top: 0px;
     gap: 5px;
-    /* background-color: rebeccapurple; */
   }
   .user ion-icon {
-    /* position: absolute;
-    top: 0;
-    left: 0; */
-    /* width: 50px;
-    height: 50px; */
     object-fit: contain;
     color: #4594e1;
   }
   .search label ion-icon {
     position: relative;
-    /* top: 0;
-    left: 10px; */
+
     font-size: 1.2rem;
   }
   .user {
@@ -441,7 +436,7 @@ body {
     align-items: center;
   }
   .search label input {
-    width: 300px;
+    width: 100%;
     height: 40px;
     border-radius: 40px;
     padding: 5px 20px;
@@ -459,7 +454,6 @@ body {
   .search label ion-icon {
     font-size: 30px;
   }
-
   .navigation {
     width: 80px;
   }
@@ -503,7 +497,7 @@ body {
     border-radius: 20px;
     border: 0.5px solid rgba(128, 128, 128, 0.514);
     padding: 10px;
-    /* padding-right: 0px; */
+
     padding-bottom: 10px;
 
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);

@@ -377,4 +377,27 @@ body {
   #adminUsername {
     display: none;
   }
+  #getBestStudents-box {
+    width: 80%;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 0.5px solid rgba(128, 128, 128, 0.514);
+    padding: 10px;
+    /* padding-right: 0px; */
+    padding-bottom: 10px;
+
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  }
+  .search-card {
+    padding: 5px;
+    font-size: 15px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .search-card .card {
+    width: 150px;
+  }
 }

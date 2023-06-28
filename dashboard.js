@@ -151,8 +151,8 @@ topThreeStudentButton.addEventListener("click", function (event) {
                 <p>${item.email}</p>
               </div>
               <div class="card">
-                <p>Phone: </p>
-                <p>${item.phone_number}</p>
+                <span>Phone: </span>
+                <span>${item.phone_number}</span>
               </div>
               <div class="card">
                 <p>Position: </p>

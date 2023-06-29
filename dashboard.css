@@ -320,7 +320,7 @@ td:hover {
 
 @media only screen and (max-width: 768px) {
   #table {
-    margin-top: 280px;
+    margin-top: 480px;
     width: 80vw;
     overflow-x: scroll;
     margin-bottom: 50px;
@@ -328,7 +328,7 @@ td:hover {
   }
 
   table {
-    margin-top: 100px;
+    /* margin-top: 500px; */
     width: 100%;
     margin: 10px;
   }
@@ -422,7 +422,7 @@ td:hover {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(1, 1fr);
-    margin-bottom: 100px;
+    margin-bottom: 500px;
   }
   .main {
     position: relative;

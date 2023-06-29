@@ -244,7 +244,7 @@ body {
 }
 
 #studentModal {
-  background-color: rgba(230, 224, 224, 0.61);
+  /* background-color: rgba(230, 224, 224, 0.61); */
   width: 100vw;
   height: 100vh;
   position: absolute;
@@ -302,7 +302,7 @@ body {
     height: 100vh;
   } */
   #studentModal {
-    background-color: rgba(230, 224, 224, 0.61);
+    background-color: transparent;
     width: 100vw;
     height: 150%;
     position: absolute;
@@ -331,6 +331,7 @@ body {
     background-color: rgb(255, 255, 255);
     align-items: center;
     justify-content: center;
+
     z-index: 10;
   }
 
@@ -418,12 +419,11 @@ body {
   }
   #getBestStudents-box {
     width: 80%;
-    height: 500px;
+    height: 90vh;
     background-color: #fff;
     border-radius: 20px;
     border: 0.5px solid rgba(128, 128, 128, 0.514);
     padding: 10px;
-    /* padding-right: 0px; */
     padding-bottom: 10px;
 
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
@@ -529,7 +529,7 @@ body {
   }
   #getBestStudents-box {
     width: 80%;
-    height: 500px;
+    height: 80vh;
     background-color: #fff;
     border-radius: 20px;
     border: 0.5px solid rgba(128, 128, 128, 0.514);

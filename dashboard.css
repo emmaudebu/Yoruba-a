@@ -295,12 +295,11 @@ body {
   width: 50%;
 }
 #table {
-  margin-inline: 20px;
-  border: #4594e1 solid 1px;
-  margin-bottom: 20px;
+  margin-bottom: 100px;
+  padding: 20px;
+  width: 300px;
 }
 table {
-  width: 100%;
 }
 th {
   background-color: #4594e1;
@@ -310,7 +309,6 @@ th {
 td {
   padding: 10px;
   color: #4594e1;
-  border-bottom: gray solid 1px;
 }
 td:hover {
   color: black;
@@ -320,14 +318,22 @@ td:hover {
 /* //////////////////////////////////////////Mobile-view//////////////////////////////////////////////// */
 
 @media only screen and (max-width: 768px) {
-  /* .container,
-  .main {
-    height: 100vh;
-  } */
+  #table {
+    margin-top: 180px;
+    width: 80vw;
+    overflow-x: scroll;
+    margin-bottom: 50px;
+    padding: 20px;
+  }
+
+  table {
+    width: 100%;
+  }
+
   #studentModal {
     background-color: transparent;
     width: 100vw;
-    height: 150%;
+    /* height: 150%; */
     position: absolute;
     display: none;
     top: 0;

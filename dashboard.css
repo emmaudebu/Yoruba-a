@@ -297,9 +297,10 @@ body {
 #table {
   margin-bottom: 100px;
   padding: 20px;
-  width: 300px;
+  width: 100%;
 }
 table {
+  width: 100%;
 }
 th {
   background-color: #4594e1;
@@ -319,7 +320,7 @@ td:hover {
 
 @media only screen and (max-width: 768px) {
   #table {
-    margin-top: 180px;
+    margin-top: 280px;
     width: 80vw;
     overflow-x: scroll;
     margin-bottom: 50px;

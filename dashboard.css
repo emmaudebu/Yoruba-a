@@ -359,11 +359,10 @@ td:hover {
     top: 0;
     right: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-color: rgb(255, 255, 255);
     align-items: center;
     justify-content: center;
-
     z-index: 10;
   }
 
@@ -526,6 +525,7 @@ td:hover {
   }
   .navigation {
     width: 80px;
+    height: 100vh;
   }
   .board-cards {
     width: 100%;

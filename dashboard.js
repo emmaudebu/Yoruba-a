@@ -165,11 +165,64 @@ topThreeStudentButton.addEventListener("click", function (event) {
             </div>
           `
         );
-        console.table(resultData);
 
-        // Append the resultData to the getBestStudents div
         getBestStudents.innerHTML = resultData.join("");
       }
     })
     .catch((error) => console.log("error", error));
 });
+
+function fetchAllStudents() {
+  const authToken = localStorage.getItem("adminObj");
+
+  const tokenAcquired = JSON.parse(authToken);
+
+  const token = tokenAcquired.token;
+
+  const headers = new Headers();
+  headers.append("Authorization", `Bearer ${token}`);
+
+  const request = {
+    method: "GET",
+    headers: headers,
+  };
+
+  const resultData = [];
+
+  const URL =
+    "https://pluralcodesandbox.com/yorubalearning/api/admin/get_all_students";
+
+  fetch(URL, request)
+    .then((response) => response.json())
+
+    .then((result) => {
+      console.log(result);
+
+      const tableContainer = document.getElementById("allStudents");
+
+      if (result.length === 0) {
+        tableContainer.innerHTML = "No Registered Student";
+      } else {
+        result.map((item) => {
+          resultData.push(`
+         
+            <tr>
+          
+     
+              <td>${item.name}</td>
+              <td>${item.email}</td>
+              <td>${item.phone_number}</td>
+              <td>${item.position}</td>
+              <td>${item.total_score}</td>
+            </tr>
+          `);
+        });
+
+        tableContainer.innerHTML = resultData.join("");
+      }
+    })
+
+    .catch((error) => console.log("Error:", error));
+}
+
+fetchAllStudents();

@@ -294,6 +294,29 @@ body {
   display: flex;
   width: 50%;
 }
+#table {
+  margin-inline: 20px;
+  border: #4594e1 solid 1px;
+  margin-bottom: 20px;
+}
+table {
+  width: 100%;
+}
+th {
+  background-color: #4594e1;
+  color: #fff;
+  padding: 10px;
+}
+td {
+  padding: 10px;
+  color: #4594e1;
+  border-bottom: gray solid 1px;
+}
+td:hover {
+  color: black;
+  cursor: pointer;
+}
+
 /* //////////////////////////////////////////Mobile-view//////////////////////////////////////////////// */
 
 @media only screen and (max-width: 768px) {
@@ -419,7 +442,7 @@ body {
   }
   #getBestStudents-box {
     width: 80%;
-    height: 90vh;
+    height: 70px;
     background-color: #fff;
     border-radius: 20px;
     border: 0.5px solid rgba(128, 128, 128, 0.514);

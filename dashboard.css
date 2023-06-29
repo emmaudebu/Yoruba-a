@@ -328,6 +328,7 @@ td:hover {
   }
 
   table {
+    margin-top: 100px;
     width: 100%;
     margin: 10px;
   }

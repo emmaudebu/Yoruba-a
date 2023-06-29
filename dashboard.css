@@ -329,6 +329,7 @@ td:hover {
 
   table {
     width: 100%;
+    margin: 10px;
   }
 
   #studentModal {

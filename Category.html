@@ -37,9 +37,7 @@
             </a>
           </li>
           <li id="cateBtn">
-            
             <a href="Category.html">
-            
               <span class="icon"
                 ><ion-icon name="albums-outline"></ion-icon
               ></span>
@@ -129,22 +127,29 @@
           <button id="topThreeStudentButton">Top 3 Students</button>
         </section>
       </div>
-      <div  id="table">
-        <table style="border: solid 1px gray;">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Phone Number</th>
-              <th>Position</th>
-              <th>Total Score</th>
-            </tr>
-          </thead>
-          <tbody id="allStudents"></tbody>
-        </table>
+
+      <div class="category-form">
+        <section>
+          <form action="">
+            <div>
+              <label for="">Categorey-Name</label>
+            </div>
+            <input type="text" name="Category-name" class="category-name" />
+            <div>
+              <label for="Image">Category Image</label>
+            </div>
+            <input
+              type="file"
+              name="Image"
+              accept=".jpg,.jpeg,.png"
+              class="Image"
+            />
+            <div>
+              <button>Create Category</button>
+            </div>
+          </form>
+        </section>
       </div>
-    </div>
-      </d>
     </section>
 
     <script
@@ -155,7 +160,7 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <script src="./dashboard.js"></script>
+
     <script src="./categories.js"></script>
   </body>
 </html>

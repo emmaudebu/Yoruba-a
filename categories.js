@@ -172,10 +172,178 @@ topThreeStudentButton.addEventListener("click", function (event) {
     .catch((error) => console.log("error", error));
 });
 
-let cateBtn = document.getElementById("cateBtn");
+// category
 
-cateBtn.addEventListener("click", category());
+// // STEP 1: Function to create categories
+// function createCategory() {
+//   // STEP 2: Get the name, image input, and button
+//   const nameInput = document.getElementById("Category-name");
+//   const imageInput = document.getElementById("image");
+//   const createButton = document.getElementById("createBtn");
 
-function category(params) {
-  console.log("category");
+//   // STEP 3: Add the pulse class to the button and change the label/text
+//   createButton.classList.add("pulse");
+//   createButton.innerText = "Sending";
+
+//   // STEP 4a: Check if inputs are empty
+//   if (!nameInput.value || !imageInput.value) {
+//     alert("All fields are required.");
+//     // STEP 4b: Reset the button state and return early
+//     resetButton();
+//     return;
+//   }
+
+//   // STEP 5: Get the token from local storage
+//   const authToken = localStorage.getItem("adminObj");
+//   const tokenAcquired = JSON.parse(authToken);
+//   const token = tokenAcquired.token;
+
+//   // STEP 6: Create a new Headers object with Authorization
+//   const headers = new Headers();
+//   headers.append("Authorization", `Bearer ${token}`);
+
+//   // STEP 7: Create a new FormData object and append inputs
+//   const formData = new FormData();
+//   formData.append("name", nameInput.value);
+//   formData.append("image", imageInput.value);
+
+//   // STEP 8: Create the category request object
+//   const categoryRequest = {
+//     method: "POST",
+//     headers: headers,
+//     body: formData,
+//   };
+
+//   // STEP 9: Define the endpoint
+//   const endpoint =
+//     "https://pluralcodesandbox.com/yorubalearning/api/admin/create_category";
+
+//   // STEP 10: Use fetch API to make the request
+//   fetch(endpoint, categoryRequest)
+//     .then((response) => response.json())
+//     .then((result) => handleResponse(result))
+//     .catch((error) => handleError(error));
+// }
+
+// // STEP 11: Handle the response
+// function handleResponse(result) {
+//   // STEP 12: Console log the result
+//   console.log(result);
+
+//   // STEP 13: Check the status of the response
+//   if (result.status === "success") {
+//     // Show success notification and redirect
+//     showNotification("Category successfully created.");
+//     setTimeout(() => {
+//       resetButton();
+//       window.location.href = "category.html";
+//     }, 5000);
+//   } else {
+//     // Show error notification
+//     showNotification("Category not created.");
+//     resetButton();
+//   }
+// }
+
+// // STEP 14: Show notification function
+// function showNotification(message) {
+//   // Show your notification message to the user
+//   alert(message);
+// }
+
+// // STEP 15: Catch the error
+// function handleError(error) {
+//   console.error("Error:", error);
+//   showNotification("An error occurred. Please try again later.");
+//   resetButton();
+// }
+
+// // Utility function to reset the button state
+// function resetButton() {
+//   const createButton = document.getElementById("createBtn");
+//   createButton.classList.remove("pulse");
+//   createButton.innerText = "Create category";
+// }
+
+// // Attach the event listener to the form submission
+// const form = document.querySelector("form");
+// form.addEventListener("submit", function (event) {
+//   event.preventDefault(); // Prevent the form from submitting normally
+//   createCategory(); // Call the createCategory function
+// });
+
+const categoryNameInput = document.getElementById("Category-name");
+const categoryImageInput = document.getElementById("image");
+const createCategoryBtn = document.getElementById("createBtn");
+
+createCategoryBtn.addEventListener("click", createCategory);
+
+function createCategory(event) {
+  event.preventDefault();
+  // STEP 3
+  createCategoryBtn.classList.add("pulse");
+  createCategoryBtn.textContent = "Sending...";
+
+  // STEP 4a
+  const categoryName = categoryNameInput.value;
+  const categoryImage = categoryImageInput.files[0];
+
+  if (categoryName === "" || categoryImage === "") {
+    alert("All fields are required");
+    // STEP 4b
+    createCategoryBtn.classList.remove("pulse");
+    createCategoryBtn.textContent = "Create Category";
+    // return;
+  }
+
+  // STEP 5
+  const authToken = localStorage.getItem("adminObj");
+  const tokenAcquired = JSON.parse(authToken);
+  const token = tokenAcquired.token;
+
+  // STEP 6
+  const headers = new Headers();
+  headers.append("Authorization", `Bearer ${token}`);
+
+  // STEP 7
+  const formData = new FormData();
+  formData.append("name", categoryName);
+  formData.append("image", categoryImage);
+
+  // STEP 8
+  const categoryRequest = {
+    method: "POST",
+    headers: headers,
+    body: formData,
+  };
+
+  // STEP 9
+  const URL =
+    "https://pluralcodesandbox.com/yorubalearning/api/admin/create_category";
+
+  // STEP 10
+  fetch(URL, categoryRequest)
+    // STEP 11
+    .then((response) => response.json())
+    // STEP 12
+    .then((result) => {
+      console.log(result.message);
+      // STEP 13
+      if (result.status === "success") {
+        alert("Category successfully created");
+        setTimeout(() => {
+          location.href = "category.html";
+        }, 5000);
+      } else {
+        // STEP 14
+        alert("Category not created");
+      }
+      // STEP 15
+      createCategoryBtn.classList.remove("pulse");
+      createCategoryBtn.textContent = "Create Category";
+    })
+    // STEP 15
+    .catch((error) => {
+      console.log("Error:", error);
+    });
 }

@@ -603,6 +603,7 @@ form {
   flex-direction: column;
   gap: 5px;
   justify-content: space-around;
+  width: 100%;
 }
 .category-name,
 .Image {
@@ -619,4 +620,25 @@ form {
   border: none;
   outline: none;
   border-radius: 4px;
+}
+
+@media only screen and (max-width: 768px) {
+  .category-form {
+    color: #000;
+    width: 80vw;
+    padding: 1.5rem;
+    box-shadow: 0px 20px 10px rgba(93, 93, 94, 0.2);
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+  }
+  .category-name,
+  .Image {
+    padding: 0.5rem;
+    border: 1px black solid;
+    border-radius: 4px;
+    height: 40px;
+    margin-block: 5px;
+  }
 }
